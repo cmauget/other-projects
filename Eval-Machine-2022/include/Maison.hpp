@@ -21,6 +21,7 @@ class Maison : public Batiment{
         int nbEtages() const;
         void ajouteEtage(int surfaceEtage);
         string getTypeBatiment() const override;
+        int prevoirGrue() override;
 };
 
 #endif

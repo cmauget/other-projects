@@ -17,6 +17,10 @@ void Maison::ajouteEtage(int surfaceEtage) {
     }
 }
 
+int Maison::prevoirGrue() {
+    return 0;
+}
+
 std::string Maison::getTypeBatiment() const  {
     return "MAISON";
 }

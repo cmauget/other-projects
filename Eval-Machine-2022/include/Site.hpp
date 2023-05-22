@@ -1,7 +1,7 @@
 #ifndef SITE_HPP
 #define SITE_HPP
 
-#include"Batiment.hpp"
+class Batiment;
 
 #include<iostream>
 #include<list>
@@ -20,9 +20,11 @@ class Site {
         void AjouterBatiment(Batiment* Batiment);
         bool retirerBatiment(int num);
 
+        bool getClasse() const;
+
         Batiment* operator[](int i);
 
-        friend ostream& operator<<(ostream &os, Site& s);
+        friend std::ostream& operator<<(std::ostream &os, Site& s);
 
 };
 

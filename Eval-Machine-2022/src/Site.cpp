@@ -1,4 +1,5 @@
 #include "../include/Site.hpp"
+#include"../include/Batiment.hpp"
 
 Site::Site(const bool& c) : classe(c) {
 
@@ -21,6 +22,10 @@ bool Site::retirerBatiment(int num) {
         i++;
     }
     return !test;
+}
+
+bool Site::getClasse() const {
+    return classe;
 }
 
 Batiment* Site::operator[](int i){

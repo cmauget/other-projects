@@ -35,6 +35,8 @@ class Batiment {
 
         virtual string getTypeBatiment() const = 0;
 
+        virtual int prevoirGrue() = 0;
+
         friend std::ostream& operator<<(std::ostream& os, const Batiment& batiment);
 
 

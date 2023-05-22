@@ -18,9 +18,11 @@ class Immeuble : public Batiment{
 
         Immeuble(const string& nom2);
 
+        void setSite(Site* s);
         int nbEtages() const;
         void ajouteEtage(int surfaceEtage);
         string getTypeBatiment() const override;
+        int prevoirGrue() override;
 };
 
 #endif

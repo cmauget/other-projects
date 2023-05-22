@@ -1,4 +1,5 @@
 #include "../include/Immeuble.hpp"
+#include "../include/Site.hpp"
 
 #include <iostream>
 
@@ -25,4 +26,16 @@ std::string Immeuble::getTypeBatiment() const  {
 
 }
 
+void Immeuble::setSite(Site* s){
+    site = s;
+}
 
+int Immeuble::prevoirGrue() {
+    int out(0);
+    if ((site)->getClasse()){
+        out=0;
+    } else {
+        out=2; //flemme
+    }
+    return out; 
+}
