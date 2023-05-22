@@ -19,24 +19,31 @@ int Batiment::nbBatiment() const{
     return this->compteur;
 };
 
+int Batiment::getNumero() const {
+    return this->numero;
+}
+
+std::string Batiment::getNom() const {
+    return this-> nom;
+}
+
+
+
 Batiment::~Batiment()  {
     this->compteur--;
 };
 
+/**
+string Batiment::getTypeBatiment() const {
+    return "IMMEUBLE";
+};**/
 
-int main(int argc, char const *argv[])
-{
-    Batiment* a = new Batiment("test");
-    Batiment* b = new Batiment("test2");
-    cout << b->nbBatiment() << endl;
-    cout << a->nbBatiment() << endl;
+std::ostream& operator << (std::ostream& os, const Batiment& battiment) {
+    os << "BATIMENT N° "<< battiment.numero << " Nom " << battiment.nom << std::endl;
 
-    delete a;
-
-    cout << b->nbBatiment() << endl;
-
-    return 0;
+    return os;
 }
+
 
 
 
